@@ -7,12 +7,23 @@ open System.Text.Json
 [<EntryPoint>]
 let main argv =
 
+    // TODO Proper argument parsing
     let folder = argv.[0]
+    let output = argv.[1]
 
     let stats =
         Directory.GetFiles folder
-        |> Array.map Data.readFromPath
-        |> Array.map Parsers.parseFile
+        |> Array.toList
+        |> List.map Data.readFromPath
+        |> List.map Parsers.parseFile
 
-    JsonSerializer.Serialize(stats) |> printf "%s"
+    let csv = Report.csv stats
+
+    use writer = new StreamWriter(output)
+    for values in csv do
+        let row = String.Join(',', values)
+        writer.WriteLine(row)
+    
+    //     JsonSerializer.Serialize(stats) |> printf "%s"
+
     0

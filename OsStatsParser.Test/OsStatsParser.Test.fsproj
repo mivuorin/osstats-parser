@@ -24,6 +24,7 @@
     <Compile Include="ParseHeadingTest.fs" />
     <Compile Include="ParseEntryTest.fs" />
     <Compile Include="IntegrationTest.fs" />
+    <Compile Include="ReportTest.fs" />
     <Compile Include="Program.fs" />
     <EmbeddedResource Include="report.txt" />
   </ItemGroup>
