@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <PackageId>OsStatsParser</PackageId>
+    <Authors />
+    <Company>OsStatsParser</Company>
+    <Product>OsStatsParser</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="5.0.2">
+      <ExcludeAssets>contentFiles</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Include="Data.fs" />
+    <Compile Include="Parsers.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+</Project>

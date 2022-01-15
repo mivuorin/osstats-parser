@@ -1,0 +1,10 @@
+Reported OS-contributions in #opensource for 1/2019 in all office(s)
+• Test.Person 0.5 h
+• Ruge 20 h
+• Random 2.5 h
+------------------------------
+Project count : 27
+Contributor count : 3 people
+Total hours : 236 h
+Total compensation (15€/h) : 3540 €
+

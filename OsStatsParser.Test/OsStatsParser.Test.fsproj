@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+    <GenerateProgramFile>false</GenerateProgramFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="5.0.2">
+      <ExcludeAssets>contentFiles</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="FsUnit" Version="4.1.0" />
+    <PackageReference Include="NUnit" Version="3.13.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="ParseHeadingTest.fs" />
+    <Compile Include="ParseEntryTest.fs" />
+    <Compile Include="IntegrationTest.fs" />
+    <Compile Include="Program.fs" />
+    <EmbeddedResource Include="report.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OsStatsParser\OsStatsParser.fsproj" />
+  </ItemGroup>
+
+</Project>
