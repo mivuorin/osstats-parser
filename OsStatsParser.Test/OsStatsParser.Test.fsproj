@@ -23,6 +23,7 @@
   <ItemGroup>
     <Compile Include="ParseHeadingTest.fs" />
     <Compile Include="ParseEntryTest.fs" />
+    <Compile Include="ParseFileTest.fs" />
     <Compile Include="IntegrationTest.fs" />
     <Compile Include="ReportTest.fs" />
     <Compile Include="Program.fs" />

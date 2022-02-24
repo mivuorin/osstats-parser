@@ -18,7 +18,9 @@ type CliArguments =
 [<EntryPoint>]
 let main argv =
 
-    let parser = ArgumentParser.Create<CliArguments>(errorHandler = ProcessExiter())
+    let parser =
+        ArgumentParser.Create<CliArguments>(errorHandler = ProcessExiter())
+
     let results = parser.Parse argv
 
     let folder =
