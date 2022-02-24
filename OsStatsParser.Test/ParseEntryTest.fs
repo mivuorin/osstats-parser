@@ -2,6 +2,7 @@
 
 open NUnit.Framework
 open OsStatsParser.Parsers
+open FsUnit
 
 let valid =
     seq {
@@ -11,5 +12,5 @@ let valid =
 
 [<TestCaseSource("valid")>]
 let ParseEntry_returns_entry_from_line (line: string) (expected: Entry) =
-    let actual = parseEntry line
-    Assert.AreEqual(expected, actual)
+    parseEntry line
+    |> should equal expected
